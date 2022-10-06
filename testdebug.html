@@ -20,7 +20,7 @@ var rawData = {
     {
       "attribute": "case.CountryOfContract",
       "valueAsString": "1f087fa1-4b87-485e-88f5-de581e9440b7"
-    }
+    }, // kurang koma
     {
       "attribute": "case.ClientPresent",
       "valueAsString": "fc7610f9-7c80-4182-b815-a82bff28524c"
@@ -426,7 +426,7 @@ var rawData = {
       "valueAsString": 1
     },
     {
-      "attribute": "case.life[0].product[0].benefit[10].amount,
+      "attribute": "case.life[0].product[0].benefit[10].amount", // kurang tutup kutip dua
       "valueAsString": 65000000
     },
     {
@@ -435,7 +435,7 @@ var rawData = {
     },
     {
       "attribute": "case.life[0].product[0].benefit[12].amount",
-      "valueAsString": 
+      "valueAsString": "de701835-42fc-40ae-b31e-b2388167a1d8" // tidak ada value
     },
     {
       "attribute": "case.life[0].product[0].benefit[1].termBasis",
@@ -525,7 +525,7 @@ function compareDeep(a,b) {
 
 function compareDeep2(a,b) {
   var tmpStra = a.attribute;
-  var tmpStrb = b.attributes;
+  var tmpStrb = b.attribute; // key attributes tidak ada seharusnya attribute
 
 
   var cleanA = tmpStra.match(/\[\d+/g);
@@ -538,7 +538,7 @@ function compareDeep2(a,b) {
     return 1;
     
   for(var i=0;i<cleanA.length && i<cleanB.length;i++){
-    var a = parseInt(cleanA[].slice(1, cleanA[i].length));
+    var a = parseInt(cleanA[i].slice(1, cleanA[i].length)); // kurang key (i)
     var b = parseInt(cleanB[i].slice(1, cleanB[i].length));
 
     if (a < b)
