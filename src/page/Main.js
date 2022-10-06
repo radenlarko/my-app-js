@@ -1,4 +1,6 @@
 import React from "react";
+import AuthPage from "../component/main/AuthPage";
+import HashString from "../component/main/HashString";
 import JsonManipulasi from "../component/main/JsonManipulasi";
 import JsonManipulasiRemote from "../component/main/JsonManipulasiRemote";
 
@@ -11,6 +13,10 @@ const Main = () => {
         <JsonManipulasi />
         <hr />
         <JsonManipulasiRemote />
+        <hr />
+        <HashString />
+        <hr />
+        <AuthPage />
       </div>
     </div>
   );
